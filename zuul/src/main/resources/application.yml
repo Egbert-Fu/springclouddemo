@@ -1,0 +1,13 @@
+server:
+  port: 7030
+spring:
+  application:
+    name: service-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7000/eureka/
+zuul:
+  routes:
+    province-service: /province/**
+    city-service: /city/**
